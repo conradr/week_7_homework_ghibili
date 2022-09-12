@@ -1,10 +1,47 @@
 .App {
   text-align: left;
+  width: 100%;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.cover-image {
+  width: 400px;
+}
+.people-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+.people-item {
+  margin: 30px;
+  list-style: none;
+  background-color: rgb(232, 216, 191);
+}
+.attributes {
+  padding: 30px;
+}
+.title {
+  text-align: center;
+  background-color: #412605;
+  color: #e0e1e2;
+  padding: 10px;
+  font-size: 1em;
+}
+.image {
+  width: 150px;
+  padding-left: 100px;
+}
+.attribute-group {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid;
+  padding: 5px;
+}
+.attribute-value {
+  text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -17,8 +54,6 @@
   background-color: #e0e1e2;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-
   font-size: calc(10px + 2vmin);
 }
 

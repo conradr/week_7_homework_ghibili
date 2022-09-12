@@ -1,4 +1,4 @@
-const movieSelector = ({ movies, onMovieSelected }) => {
+const movieSelector = ({ movies, onMovieSelected, people }) => {
   const handleMovieClick = (event) => {
     onMovieSelected(event.target.id)
   }
@@ -12,8 +12,21 @@ const movieSelector = ({ movies, onMovieSelected }) => {
       </li>
     )
   })
+  const peopleArray = people.map((person, index) => {
+    return (
+      <li key={index}>
+        <a href='#' id={index}>
+          {person.name}
+        </a>
+      </li>
+    )
+  })
 
-  return <ul>{movieArray}</ul>
+  return (
+    <>
+      <ul>{movieArray}</ul>
+    </>
+  )
 }
 
 export default movieSelector
